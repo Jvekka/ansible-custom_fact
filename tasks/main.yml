@@ -6,7 +6,7 @@
 
 - name: Copy fact file
   win_copy:
-      src: 'fact_ip.ps1'
+      src: 'local_users.ps1'
       dest: 'C:\dwf-ansible\custom_facts\local_users.ps1'
 
 - name: Set ansible local variable
@@ -22,4 +22,4 @@
 
 - name: Print out custom fact
   debug:
-    msg: "{{ ansible_fact_ip }}"
+    msg: "{{ ansible_local_users }}"
